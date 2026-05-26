@@ -1,0 +1,41 @@
+{
+  "name": "RefiMath Site",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-rename-tag",
+        "vincaslt.highlight-matching-tag",
+        "naumovs.color-highlight",
+        "streetsidesoftware.code-spell-checker",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000,
+        "editor.fontSize": 14,
+        "editor.tabSize": 2,
+        "emmet.includeLanguages": { "html": "html" },
+        "livePreview.portNumber": 3000,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[html]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "echo '✅ RefiMath Codespace ready! Open any HTML file and right-click → Open with Live Preview to see it live.'",
+
+  "portsAttributes": {
+    "3000": {
+      "label": "Live Preview",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
