@@ -1,0 +1,20 @@
+name: Notify Google on Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ping-google:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Google sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://refimath.com/sitemap.xml" \
+          && echo "✅ Google pinged with updated sitemap"
+
+      - name: Ping Bing sitemap
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://refimath.com/sitemap.xml" \
+          && echo "✅ Bing pinged with updated sitemap"
