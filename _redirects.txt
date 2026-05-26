@@ -1,0 +1,8 @@
+# Netlify redirects file
+# Handles clean URLs and 404 fallback
+
+# Force www to non-www (update to your domain)
+# https://www.refimath.com/* https://refimath.com/:splat 301!
+
+# Custom 404
+/* /404.html 404
